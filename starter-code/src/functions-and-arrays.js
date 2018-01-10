@@ -16,12 +16,10 @@ var words = [
 ];
 
 function findLongestWord(array) {
-  
-  if (array == undefined) return 0;
-  
+
   array.sort((a,b)=> b.length - a.length);
   return array[0];
-  
+
 }
 
 // Calculating a Sum
