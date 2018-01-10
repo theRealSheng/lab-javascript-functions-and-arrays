@@ -126,16 +126,16 @@ var wordsCount = [
 ];
 
 function howManyTimes(array, word) {
-
-  if (array.map(x => x == word).length == 1) return 1;
-
-  if (array.length === 0) return false;
-
-  if (array.filter(x => x == word).length === 5) return 5;
-
-  if (!array.includes(word)) return 0;
-
-  return array.map(x => x === word).length / array.length;
+  var appearances = 0;
+  if (array.length === 0) {
+    return undefined;
+  }
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      appearances++;
+    }
+  }
+  return appearances;
 }
 // Bonus Quest
 
